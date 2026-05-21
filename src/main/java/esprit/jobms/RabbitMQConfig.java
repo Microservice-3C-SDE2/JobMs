@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RabbitMQConfig {
     // Nom de la queue SANS avoir besoin à déclaré la queue
-    public static final String CANDID_JOB_QUEUE = "jobQueueSDE22";
+    public static final String CANDID_JOB_QUEUE = "jobQueueSDE1";
     // sérialisation JSON <-> POJO automatique pour RabbitTemplate
     @Bean
     public MessageConverter jsonMessageConverter() {

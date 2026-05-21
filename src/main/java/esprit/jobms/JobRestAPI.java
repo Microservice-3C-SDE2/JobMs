@@ -59,11 +59,11 @@ public class JobRestAPI {
             return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
         }
     }
-    @PostMapping("/send")
-    public ResponseEntity<Job> createJob(@RequestBody Job job) {
-        Job savedJob = jobService.saveAndSendJob(job);
-        return ResponseEntity.ok(savedJob);
-        // return "Job created and sent to RabbitMQ with ID: " + savedJob.getId();
-    }
+        @PostMapping("/send")
+        public ResponseEntity<Job> createJob(@RequestBody Job job) {
+            Job savedJob = jobService.saveAndSendJob(job);
+            return ResponseEntity.ok(savedJob);
+            // return "Job created and sent to RabbitMQ with ID: " + savedJob.getId();
+        }
 
 }
